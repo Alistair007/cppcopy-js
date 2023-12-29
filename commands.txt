@@ -1,0 +1,29 @@
+Assembly commands:
+
+Hex code    Command name    Parameters  Descriotion
+-----------------------Miscellaneous-----------------------
+0x00        nop             0           Null operation
+------------------------Declaration------------------------
+0x01        int             1           Declares an integer with value P1
+0x02        bool            1           Declares a boolean with value P1
+0x03        flt             1           Declares a float with value P1
+0x04        char            1           Declares a char with value P1
+0x05        ptr             2           Gets P1's address and writes it in P2
+--------------------------Jumping--------------------------
+0x06        jmp             1           Jumps at line P1
+0x07        jmpz            2           Jumps at line P1 if P2 is zero
+0x08        jmpt            2           Jumps at line P1 if P2 is non-zero
+----------------------Value operations---------------------
+0x09        cpy             2           Copies P1's value into P2's value
+0x0A        add             3           Adds P1 and P2 and writes to P3
+0x0B        sub             3           Subtracts P2 from P1 and writes to P3
+0x0C        mul             3           Multiplies P1 and P2 and writes to P3
+0x0D        div             3           Divides P1 by P2 and writes to P3
+----------------------Logic operations---------------------
+0x0E        not             2           Performs a not logic operation of P1 and writes to P2
+0x0F        and             3           Performs an and logic operation of P1 and P2 and writes to P3
+0x10        or              3           Performs an or logic operation of P1 and P2 and writes to P3
+0x11        xor             3           Performs an exclusive or logic operation of P1 and P2 and writes to P3
+---------------------------Stack---------------------------
+0x12        push            2           Pushes P1 in the stack P2
+0x13        pull            2           Pulls from stack P1 and writes to P2
